@@ -90,7 +90,7 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-          fingerprints: ["d8:cb:6a:d2:7e:7d:bc:44:1d:df:c8:47:b9:14:72:88"] # You can get this ID in the section where you registered the SSH Key
+          fingerprints: ["47:9c:dc:4e:d4:c3:95:7f:83:1b:1d:de:a8:e7:43:36"] # You can get this ID in the section where you registered the SSH Key
       - run:
           name: Install dependencies
           command: |
@@ -99,7 +99,7 @@ jobs:
       - run:
           name: Configure server
           command: |
-            ansible-playbook -i inventory main4.yml
+            ansible-playbook -i inventory.txt  main4.yml
 
   # Exercise: Smoke Testing
   smoke_test:
